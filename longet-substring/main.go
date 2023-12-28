@@ -29,7 +29,7 @@ func lengthOfLongestSubstring(s string) int {
 }
 
 func main() {
-	fmt.Println(lengthOfLongestSubstring("abcabcbb")) 
-	fmt.Println(lengthOfLongestSubstring("bbbbb"))   
-	fmt.Println(lengthOfLongestSubstring("pwwkew")) 
+	fmt.Println(lengthOfLongestSubstring("abcabcbb"))
+	fmt.Println(lengthOfLongestSubstring("bbbbb"))
+	fmt.Println(lengthOfLongestSubstring("pwwkew"))
 }
