@@ -3,42 +3,27 @@ package main
 import "fmt"
 
 func longestPalindrome(s string) string {
-	n := len(s)
-	if n <= 1 {
-		return s
+	len := len(s)
+	if len == 0 {
+		return ""
 	}
 
-	// dp[i][j] is true if the substring s[i:j+1] is a palindrome
-	dp := make([][]bool, n)
-	for i := range dp {
-		dp[i] = make([]bool, n)
-		dp[i][i] = true
-	}
-
-	start, maxLength := 0, 1
-
-	// Check palindromes of length 2
-	for i := 0; i < n-1; i++ {
-		if s[i] == s[i+1] {
-			dp[i][i+1] = true
-			start = i
-			maxLength = 2
+	var l, r, pl, pr int 
+	for r < len {
+		for r+1 < len && s[l] == s[r+1] {
+			r++
 		}
-	}
-
-	// Check palindromes of length 3 or more
-	for length := 3; length <= n; length++ {
-		for i := 0; i <= n-length; i++ {
-			j := i + length - 1
-			if dp[i+1][j-1] && s[i] == s[j] {
-				dp[i][j] = true
-				start = i
-				maxLength = length
-			}
+		for l-1 >= 0 && r+1 < len && s[l-1] == s[r+1] {
+			l--
+			r++
 		}
+		if r-l > pr-pl {
+			pl, pr = l, r
+		}
+		l = (l+r)/2 + 1
+		r = l
 	}
-
-	return s[start : start+maxLength]
+	return s[pl : pr+1]
 }
 
 func main() {
