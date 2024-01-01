@@ -2,26 +2,16 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 func isPalindrome(x int) bool {
-	// Convert the integer to a string
-	strX := strconv.Itoa(x)
-
-	// Compare the string with its reverse
-	return strX == reverseString(strX)
-}
-
-func reverseString(s string) string {
-	// Convert the string to a slice of runes and reverse it
-	runes := []rune(s)
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
+	var reversedNum int
+	tmp := x
+	for tmp > 0 {
+		reversedNum = reversedNum*10 + tmp%10
+		tmp = tmp/10
 	}
-
-	// Convert the slice of runes back to a string
-	return string(runes)
+	return x == reversedNum
 }
 
 func main() {
