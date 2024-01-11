@@ -8,7 +8,7 @@ func longestPalindrome(s string) string {
 		return ""
 	}
 
-	var l, r, pl, pr int 
+	var l, r, pl, pr int
 	for r < len {
 		for r+1 < len && s[l] == s[r+1] {
 			r++
