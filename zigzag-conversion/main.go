@@ -32,7 +32,6 @@ func convert(s string, numRows int) string {
 		}
 
 	}
-
 	return string(zigzag)
 }
 
