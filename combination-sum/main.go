@@ -29,8 +29,6 @@ func backtrack(result *[][]int, candidates []int, currentCombination []int, rema
 
 func main() {
 	fmt.Println(CombinationSum([]int{2, 3, 6, 7}, 7))
-
 	fmt.Println(CombinationSum([]int{2, 3, 5}, 8))
-
 	fmt.Println(CombinationSum([]int{2}, 1))
 }
