@@ -22,6 +22,7 @@ func permute(nums []int) [][]int {
 	}
 
 	backtrack(0)
+	
 	return result
 }
 
