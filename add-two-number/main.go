@@ -50,7 +50,6 @@ func createLinkedList(nums []int) *ListNode {
 		current.Next = &ListNode{Val: num}
 		current = current.Next
 	}
-
 	return dummyHead.Next
 }
 
