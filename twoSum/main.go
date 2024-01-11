@@ -14,7 +14,6 @@ func twoSum(nums []int, target int) []int {
 
 		numIndices[num] = i
 	}
-
 	return nil
 }
 
