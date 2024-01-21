@@ -5,7 +5,9 @@ import (
 	"strings"
 )
 
+// romanToInt converts a Roman numeral string to an integer.
 func romanToInt(s string) int {
+	// Define a map to store the values of Roman numerals.
 	romans := map[rune]int{
 		'I': 1,
 		'V': 5,
@@ -16,6 +18,7 @@ func romanToInt(s string) int {
 		'M': 1000,
 	}
 
+	// Replace specific combinations to simplify processing.
 	s = strings.Replace(s, "CM", "CCCCCCCCC", -1) // 900
 	s = strings.Replace(s, "CD", "CCCC", -1)      // 400
 	s = strings.Replace(s, "XC", "XXXXXXXXX", -1) // 90
@@ -24,6 +27,7 @@ func romanToInt(s string) int {
 	s = strings.Replace(s, "IV", "IIII", -1)      // 4
 
 	var sum int
+	// Iterate through the modified string and accumulate the corresponding values.
 	for _, roman := range s {
 		sum += romans[roman]
 	}
