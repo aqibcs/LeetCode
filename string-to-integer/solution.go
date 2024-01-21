@@ -46,8 +46,8 @@ func myAtoi(s string) int {
 
 func main() {
 	input1 := "42"
-    result1 := myAtoi(input1)
-    fmt.Println(result1) 
+	result1 := myAtoi(input1)
+	fmt.Println(result1)
 
 	input2 := "	-42"
 	result2 := myAtoi(input2)
