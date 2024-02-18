@@ -6,7 +6,6 @@ Welcome to the problem-solving practice repository! This project consists of two
 Explore the C++ problem-solving practice by clicking on the link below:
 - [C++ Problem Solving Folder](<c++>)
 
-
 ## Golang Folder
 Explore the Go (Golang) problem-solving practice by clicking on the link below:
 - [Golang Problem Solving Folder](<golang>)
